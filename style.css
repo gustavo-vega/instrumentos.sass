@@ -1,0 +1,106 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+h1 {
+  color: greenyellow; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px; }
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique; }
+
+.img {
+  height: 400px;
+  width: 60%;
+  margin: 30px 270px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0 10px 20px 10px green;
+  transition: transform 0.5s; }
+
+.img:hover {
+  transform: rotate(5deg); }
+
+.texto {
+  text-align: center;
+  font-family: cursive; }
+
+.container {
+  display: grid;
+  grid-template-areas: "insta instb instc instd" "inste instf instg insth"; }
+
+/*grid area index*/
+.insta {
+  grid-area: insta;
+  align-items: center; }
+
+.instb {
+  grid-area: instb;
+  align-items: center; }
+
+.instc {
+  grid-area: instc;
+  align-items: center; }
+
+.instd {
+  grid-area: instd;
+  align-items: center; }
+
+.inste {
+  grid-area: inste;
+  align-items: center; }
+
+.instf {
+  grid-area: instf;
+  align-items: center; }
+
+.instg {
+  grid-area: instg;
+  align-items: center; }
+
+.insth {
+  grid-area: insth;
+  align-items: center; }
+
+.card {
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 4px #15151f;
+  overflow: hidden;
+  transition: all 0.5s;
+  font-size: 20px;
+  align-items: center; }
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 2px 2px #393241; }
+  .card:hover .bloque {
+    margin: 40px 80px;
+    background-image: linear-gradient(to right, grey, white);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 1px 2px 3px #393241; }
+    .card:hover .bloque_grid {
+      border: 1px solid #3a3a59;
+      text-align: center;
+      padding: 10px; }
+  @media (max-width: 768px) {
+    .card:hover header {
+      flex-direction: column; }
+    .card:hover .bloque {
+      grid-template-columns: 1fr; }
+    .card:hover .container {
+      display: grid;
+      grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; } }
+
+@media (max-width: 768px) and (max-width: 480px) {
+  .card:hover .container {
+    display: grid;
+    grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; } }
