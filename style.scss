@@ -1,5 +1,4 @@
-//variables
-$borderColor: green;
+@import 'variables';
 
 * {
     margin: 0px;
@@ -18,6 +17,14 @@ body {
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: oblique;
+}
+
+.margen-s {
+    margin: $margenSmall;
+}
+
+.margen-m {
+    margin-left: $margenMedium;
 }
 
 .img {
@@ -49,35 +56,35 @@ h1 {
  /*grid area index*/
 .insta {
     grid-area: insta;
-    align-items: center;
+    align-items: $itemsCenter;
 }
 .instb {
     grid-area: instb;
-    align-items: center;
+    align-items: $itemsCenter;
 }
 .instc {
     grid-area: instc;
-    align-items: center;
+    align-items: $itemsCenter;
 }
 .instd {
     grid-area: instd;
-    align-items: center;
+    align-items: $itemsCenter;
 }
 .inste {
     grid-area: inste;
-    align-items: center;
+    align-items: $itemsCenter;
 }
 .instf {
     grid-area: instf;
-    align-items: center;
+    align-items: $itemsCenter;
 }
 .instg {
     grid-area: instg;
-    align-items: center;
+    align-items: $itemsCenter;
 }
 .insth {
     grid-area: insth;
-    align-items: center;
+    align-items: $itemsCenter;
 }
      
 .card {
@@ -96,21 +103,72 @@ h1 {
 .card:hover {
     transform: translateY(-15px);
     box-shadow: 0 2px 2px rgb(57, 50, 65);
-
-    .bloque {
-        margin: 40px 80px;
-        background-image: linear-gradient(to right, grey, white);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        box-shadow: 1px 2px 3px rgb(57, 50, 65);
-
-     &_grid {
-        border: 1px solid rgb(58, 58, 89);
-        text-align: center;
-        padding: 10px;
-    }
 }
 
+.bloque {
+    margin: 40px 80px;
+    background-image: linear-gradient(to right, grey, white);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 1px 2px 3px rgb(57, 50, 65);
+
+&__grid {
+    border: 1px solid rgb(58, 58, 89);
+    text-align: center;
+    padding: 10px;
+}
+}
+
+// extend
+.btn-base {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: bisque;
+    margin-top: 80px;
+}
+
+.btn-info {
+    @extend .btn-base;
+    background-color: green;
+}
+
+.btn-compra {
+    @extend .btn-base;
+    background-color: black;
+    margin: 20px;
+}
+
+//Mixim
+
+@mixin list-base($margin, $color) {
+     margin-left: $margin;
+     color: $color;
+     font-style: italic;
+}    
+
+.list-instrumentos {
+    @include list-base(30px,blue )
+}
+
+.list-accesorios {
+    @include list-base(40px, green )
+}
+
+// maps
+$titulos: (
+    contactos: rgb(99, 202, 99),
+    productos: rgb(53, 236, 53),
+);
+
+@each $nombre, $color in $titulos {
+    .link-#{$nombre} {
+        font-style: italic;
+        background-color: rgb(17, 85, 59);
+        text-align: center;
+    }
+} 
 
 
 @media (max-width: 768px) {
@@ -141,4 +199,3 @@ h1 {
     }
 }
 } 
-}

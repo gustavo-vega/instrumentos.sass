@@ -13,6 +13,12 @@ h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: oblique; }
 
+.margen-s {
+  margin: 20px; }
+
+.margen-m {
+  margin-left: 40px; }
+
 .img {
   height: 400px;
   width: 60%;
@@ -81,26 +87,63 @@ h1 {
 .card:hover {
   transform: translateY(-15px);
   box-shadow: 0 2px 2px #393241; }
-  .card:hover .bloque {
-    margin: 40px 80px;
-    background-image: linear-gradient(to right, grey, white);
+
+.bloque {
+  margin: 40px 80px;
+  background-image: linear-gradient(to right, grey, white);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 1px 2px 3px #393241; }
+  .bloque__grid {
+    border: 1px solid #3a3a59;
+    text-align: center;
+    padding: 10px; }
+
+.btn-base, .btn-info, .btn-compra {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 15px;
+  color: bisque;
+  margin-top: 80px; }
+
+.btn-info {
+  background-color: green; }
+
+.btn-compra {
+  background-color: black;
+  margin: 20px; }
+
+.list-instrumentos {
+  margin-left: 30px;
+  color: blue;
+  font-style: italic; }
+
+.list-accesorios {
+  margin-left: 40px;
+  color: green;
+  font-style: italic; }
+
+.link-contactos {
+  font-style: italic;
+  background-color: #11553b;
+  text-align: center; }
+
+.link-productos {
+  font-style: italic;
+  background-color: #11553b;
+  text-align: center; }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; }
+  .bloque {
+    grid-template-columns: 1fr; }
+  .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    box-shadow: 1px 2px 3px #393241; }
-    .card:hover .bloque_grid {
-      border: 1px solid #3a3a59;
-      text-align: center;
-      padding: 10px; }
-  @media (max-width: 768px) {
-    .card:hover header {
-      flex-direction: column; }
-    .card:hover .bloque {
-      grid-template-columns: 1fr; }
-    .card:hover .container {
-      display: grid;
-      grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; } }
+    grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; } }
 
 @media (max-width: 768px) and (max-width: 480px) {
-  .card:hover .container {
+  .container {
     display: grid;
     grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; } }
