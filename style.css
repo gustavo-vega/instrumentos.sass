@@ -3,15 +3,15 @@
   padding: 0px; }
 
 h1 {
-  color: greenyellow; }
+  color: #118331;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique; }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px; }
-
-h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: oblique; }
+  font-size: 15px;
+  background: #020024;
+  background: radial-gradient(circle, #020024 0%, rgba(12, 74, 26, 0.410802) 38%, #0c3b13 71%, #0c2332 100%); }
 
 .margen-s {
   margin: 20px; }
@@ -73,7 +73,7 @@ h1 {
   align-items: center; }
 
 .card {
-  border-radius: 5px;
+  border-radius: 20px;
   margin: 10px;
   text-align: center;
   font-weight: bold;
@@ -84,20 +84,32 @@ h1 {
   font-size: 20px;
   align-items: center; }
 
+.card a {
+  font-weight: 40px;
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  border-radius: 25px;
+  padding: 10px 40px;
+  display: block;
+  margin: 15px; }
+
 .card:hover {
   transform: translateY(-15px);
   box-shadow: 0 2px 2px #393241; }
 
 .bloque {
   margin: 40px 80px;
-  background-image: linear-gradient(to right, grey, white);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  box-shadow: 1px 2px 3px #393241; }
+  grid-template-columns: repeat(3, 1fr); }
   .bloque__grid {
-    border: 1px solid #3a3a59;
+    background-image: linear-gradient(to right, grey, white);
+    border: 1px solid #9797af;
+    border-radius: 30px;
+    box-shadow: 1px 2px 3px #393241;
     text-align: center;
-    padding: 10px; }
+    padding: 15px;
+    margin: 5px; }
 
 .btn-base, .btn-info, .btn-compra {
   text-decoration: none;
@@ -116,12 +128,12 @@ h1 {
 
 .list-instrumentos {
   margin-left: 30px;
-  color: blue;
+  color: #6dc96d;
   font-style: italic; }
 
 .list-accesorios {
   margin-left: 40px;
-  color: green;
+  color: #a6d4a6;
   font-style: italic; }
 
 .link-contactos {

@@ -6,17 +6,16 @@
 }
 
 h1 {
-    color:greenyellow ;
+    color:rgb(17, 131, 49) ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
-}
-
-h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
+    background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(12,74,26,0.4108018207282913) 38%, rgba(12,59,19,1) 71%, rgba(12,35,50,1) 100%);
 }
 
 .margen-s {
@@ -88,7 +87,7 @@ h1 {
 }
      
 .card {
-    border-radius: 5px;
+    border-radius: 20px;
     margin: 10px;
     text-align: center;
     font-weight: bold;
@@ -100,6 +99,17 @@ h1 {
     align-items: center;
 }
 
+.card a {
+    font-weight: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    border-radius: 25px;
+    padding: 10px 40px;
+    display: block;
+    margin: 15px;
+}
+
 .card:hover {
     transform: translateY(-15px);
     box-shadow: 0 2px 2px rgb(57, 50, 65);
@@ -107,15 +117,18 @@ h1 {
 
 .bloque {
     margin: 40px 80px;
-    background-image: linear-gradient(to right, grey, white);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    box-shadow: 1px 2px 3px rgb(57, 50, 65);
+
 
 &__grid {
-    border: 1px solid rgb(58, 58, 89);
+    background-image: linear-gradient(to right, grey, white);
+    border: 1px solid rgb(151, 151, 175);
+    border-radius: 30px;
+    box-shadow: 1px 2px 3px rgb(57, 50, 65);
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    margin: 5px;
 }
 }
 
@@ -149,11 +162,11 @@ h1 {
 }    
 
 .list-instrumentos {
-    @include list-base(30px,blue )
+    @include list-base(30px, rgb(109, 201, 109))
 }
 
 .list-accesorios {
-    @include list-base(40px, green )
+    @include list-base(40px, rgb(166, 212, 166) )
 }
 
 // maps
