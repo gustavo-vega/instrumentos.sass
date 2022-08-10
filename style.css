@@ -17,7 +17,7 @@ body {
   margin: 20px; }
 
 .margen-m {
-  margin-left: 40px; }
+  margin: 40px; }
 
 .img {
   height: 400px;
@@ -90,7 +90,7 @@ body {
   color: white;
   background-color: green;
   border-radius: 25px;
-  padding: 10px 40px;
+  padding: 10px 30px;
   display: block;
   margin: 15px; }
 
@@ -110,21 +110,6 @@ body {
     text-align: center;
     padding: 15px;
     margin: 5px; }
-
-.btn-base, .btn-info, .btn-compra {
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 15px;
-  font-size: 15px;
-  color: bisque;
-  margin-top: 80px; }
-
-.btn-info {
-  background-color: green; }
-
-.btn-compra {
-  background-color: black;
-  margin: 20px; }
 
 .list-instrumentos {
   margin-left: 30px;
@@ -153,9 +138,12 @@ body {
     grid-template-columns: 1fr; }
   .container {
     display: grid;
-    grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; } }
+    grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; }
+  .img {
+    height: 300px;
+    width: 100%; } }
 
-@media (max-width: 768px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .container {
     display: grid;
     grid-template-areas: "insta instb" "instc instd" "inste instf" "instg insth"; } }

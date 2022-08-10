@@ -23,7 +23,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(12,74,26,0.410801820
 }
 
 .margen-m {
-    margin-left: $margenMedium;
+    margin: $margenMedium;
 }
 
 .img {
@@ -105,7 +105,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(12,74,26,0.410801820
     color: white;
     background-color: green;
     border-radius: 25px;
-    padding: 10px 40px;
+    padding: 10px 30px;
     display: block;
     margin: 15px;
 }
@@ -132,26 +132,6 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(12,74,26,0.410801820
 }
 }
 
-// extend
-.btn-base {
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 15px;
-    font-size: 15px;
-    color: bisque;
-    margin-top: 80px;
-}
-
-.btn-info {
-    @extend .btn-base;
-    background-color: green;
-}
-
-.btn-compra {
-    @extend .btn-base;
-    background-color: black;
-    margin: 20px;
-}
 
 //Mixim
 
@@ -200,6 +180,11 @@ $titulos: (
          "inste instf"
          "instg insth";
     }
+    .img {
+        height: 300px;
+        width: 100%;
+    }
+}
 
 @media (max-width: 480px) {
     .container {
@@ -211,4 +196,4 @@ $titulos: (
          "instg insth";
     }
 }
-} 
+
